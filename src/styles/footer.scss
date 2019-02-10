@@ -61,16 +61,40 @@
 		&_fb {
 			background-color: #395a99;
 			background-image: url("./images/fb.svg");
+
+			&:hover {
+				background-color: #2d487a;
+			}
+
+			&:active {
+				background-color: #748bb7;
+			}
 		}
 
 		&_vk {
 			background-color: #3d6898;
 			background-image: url(./images/vk.svg);
+
+			&:hover {
+				background-color: #2a5885;
+			}
+
+			&:active {
+				background-color: #3d689882;
+			}
 		}
 
 		&_telegram {
 			background-color: #2ca5e0;
 			background-image: url(./images/telegram.svg);
+
+			&:hover {
+				background-color: #2384b3;
+			}
+
+			&:active {
+				background-color: #6bc0e9;
+			}
 		}
 	}
 }
@@ -88,8 +112,11 @@
 		width: 100%;
 		margin-top: 20px;
 	}
-}
 
+	&__input:focus,  &__input:active{
+		border-color: #0059d9;
+	}
+}
 
 .form__input_type {
 	&_name, &_email {
@@ -111,12 +138,21 @@
 		align-items: center;
 		height: 34px;
 		margin-top: 20px;
+		color: #0059D9;
+		transition: color 0.5s;
+
 		& input {
 			display: none;
 		}
 
+		&:hover {
+			color: #000000;
+		}
+
+		&:active {
+			color: #6ea0e9;
+		}
 	}
-	
 }
 
 
