@@ -1,0 +1,114 @@
+.expectations {
+	background: #FFFFFFFF;
+	padding:100px 40px 100px 40px;
+}
+
+.accordion {
+	max-width: 700px;
+	margin: auto;
+	list-style: none;
+
+	&__title {
+		font-family: $font_title;
+		font-size: 32px;
+		margin-bottom: 16px;
+		line-height: 36px;
+	}
+
+	&__item {
+		border-top: 1px solid #D2D9E2;
+		position: relative;
+		font-family: $font_content_1;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+.accordion-item {
+	& input {
+		display: none;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		height: 52px;
+
+		& h3 {
+			font-family: $font_title;
+		    color: #0059D9;
+		    font-size: 18px;
+		    transition: all 0.5s;
+		}
+
+		&:hover h3 {
+			color:#000;	
+		}
+
+		&:before,  &:after{
+			content: "";
+			position: absolute;
+			display: block;
+			width: 2px;
+			height: 16px;
+			right: 8px;
+			background-color: #0059D9;
+			transition: all 1s;
+		}
+
+		&:after {
+			transform: rotate(90deg);	
+		}
+	}
+
+	&__content {
+		max-width: 520px;
+		max-height: 0;
+		line-height: 20px;
+		overflow: hidden;
+		transition: all linear 0.9s;	
+	}
+
+
+	& input:checked ~ &__content {
+		max-height: 80px;
+		padding-bottom: 18px;
+		transition: all linear 1s;
+	}
+	
+	&__title:hover:after,
+	& input:checked ~ &__title:after{
+		transform: rotate(45deg);
+		background-color: #000000;
+	}
+
+	&__title:hover:before,
+	& input:checked ~ &__title:before {
+		transform: rotate(-45deg);	
+		background-color: #000000;
+	}
+
+	& input:checked ~ &__title h3 {
+		color: #000000;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	.expectations {
+		max-width: 520px;
+		padding: 52px 40px;
+	}	
+	.accordion-item__content {
+		max-width: 385px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.expectations {
+		max-width: 280px;
+		padding: 52px 20px;
+	}	
+}
+	

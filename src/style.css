@@ -1,6 +1,27 @@
 body {
 	background: #eff1f2;
-	
+}
+
+
+.button {
+	height: 52px;
+	color: #ffffff;
+	border-radius: 4px;
+	background: #0059D9;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	border: none;
+	outline: none;
+	transition: background 1s, opacity 1s;
+}
+
+.button:hover {
+	background: #000000;
+}
+
+.button:active {
+	opacity: 0.7;
 }
 
 
@@ -35,9 +56,8 @@ body {
 }
 
 .header__contact {
-	
 	width: 280px;
-	font-size: 18px;
+/*	font-size: 18px;
 	font-family: 'Montserrat', sans-serif;
 	background: #0059D9;
 	border-radius: 4px;
@@ -45,9 +65,7 @@ body {
 	height: 52px;
 	border: none;
 	outline: none;
-	transition: background 1s;
-	
-	
+	transition: background 1s;*/	
 }
 
 
@@ -86,7 +104,7 @@ body {
 
 /*accordion*/
 
-.accordion-block {
+.expectations {
 	background: #FFFFFFFF;
 	padding:100px 40px 100px 40px;
 }
@@ -125,14 +143,14 @@ body {
 
 
 
-.accordion-block label {
+.expectations label {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 	height: 52px;
 }
 
-.accordion-block label:after, .accordion-block label:before {
+.expectations label:after, .expectations label:before {
 	content: "";
 	position: absolute;
 	display: block;
@@ -145,12 +163,12 @@ body {
 
 
 
-.accordion-block label:after {
+.expectations label:after {
 	transform: rotate(90deg);
 }
 
 
-.accordion-block input {
+.expectations input {
 	display: none;
 
 }
@@ -163,54 +181,52 @@ body {
 	transition: all linear 0.9s;
 }
 
-.accordion-block input:checked ~ .item-content {
+.expectations input:checked ~ .item-content {
 	max-height: 80px;
 	padding-bottom: 18px;
 	transition: all linear 1s;
 }
 
 
-.accordion-block label:hover:after,
-.accordion-block input:checked ~ label:after{
+.expectations label:hover:after,
+.expectations input:checked ~ label:after{
 	transform: rotate(45deg);
 	background-color: #000000;
 }
-.accordion-block label:hover:before,
-.accordion-block input:checked ~ label:before {
+.expectations label:hover:before,
+.expectations input:checked ~ label:before {
 	transform: rotate(-45deg);	
 	background-color: #000000;
 }
 
 
-.accordion-block input:checked ~ .block-title {
+.expectations input:checked ~ .block-title {
 	color: #000000;
 }
 
 
 @media screen and (max-width: 1000px) {
-	.accordion-block {
+	.expectations {
 	}	
 
 }
 
 @media screen and (max-width: 600px) {
-	.accordion-block {
+	.expectations {
 		max-width: 520px;
 		padding: 52px 40px;
 	}	
 	.item-content {
 		max-width: 385px;
 	}
-
 }
 
 
 @media screen and (max-width: 320px) {
-	.accordion-block {
+	.expectations {
 		max-width: 280px;
 		padding: 52px 20px;
 	}	
-
 }
 
 
@@ -293,14 +309,12 @@ body {
 }
 
 .portfolio-project_carousel {
-
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
 	align-content: center;
 	flex-wrap: wrap;
 	width: 100%;
-
 }
 
 .project-carrousel_container {
@@ -416,7 +430,7 @@ label:hover .carrousel-navigation_circle {
 @media screen and (min-width: 780px) {
 
 	.project-carrousel_navigation {
-		justify-content: flex-end;
+		/*justify-content: flex-end;*/
 	}
 	.project-carrousel_navigation label:last-of-type {
 		display: flex;
@@ -571,7 +585,6 @@ footer {
 	padding: 6px 12px 8px 12px;
 	width: 100%;
 	height: 20px;
-
 	border: 1px solid rgba(31,64,111,0.20);
 	border-radius: 4px;
 	transition: border-color 0.5s;
@@ -599,51 +612,30 @@ footer {
 }
 
 
-.footer-form_file, .footer-form_send {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 34px;
-	border: 1px solid rgba(31,64,111,0.20);
-	border-radius: 4px;
+.button__form {
 	width: 100%;
 	margin-top: 20px;
 }
 
-.footer-form_file{
+
+.button__form_file {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 34px;
+	background: unset;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 16px;
 	color: #0059D9;
 	line-height: 20px;
+	border: 1px solid rgba(31,64,111,0.20);
+	border-radius: 4px;
 	transition: color 0.5s;
-
 }
 
-.footer-form_send {
-	height: 52px;
-	background: #0059D9;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
-	color: #FFFFFF;
-	line-height: 24px;
-	transition: background 1s;
-}
-
-.contact:hover, .footer-form_send:hover {
-	background: #000000;
-}
-
-.contact:active, .footer-form_send:active {
-	background: #0059D9;
-	opacity: 0.7;
-}
-
-.footer-form_file:hover {
+.button__form_file:hover {
+	background: unset;
 	color: #000000;
-}
-.footer-form_file:active {
-	color: #0059D9;
-	opacity: 0.7;
 }
 
 

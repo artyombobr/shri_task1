@@ -1,0 +1,155 @@
+.footer { 
+	padding: 100px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact {
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__title{
+		font-family: $font_title;
+		font-size: 32px;
+		color: #000000;
+		line-height: 36px;
+		text-align: center;
+	}
+
+	&__text {
+		font-family: $font_content_1;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
+		margin-bottom: 40px;
+		color: #000000;
+		margin-top: 21px;
+	}
+
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		font-family: $font_content_2;
+	    font-size: 16px;
+	    line-height: 20px;
+	}
+}
+
+
+
+.social {
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+	width: 176px;
+	justify-content: space-between;
+	margin-top: 16px;
+
+	&__link {
+		display: block;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		transition: background-color 0.5s;
+
+		&_fb {
+			background-color: #395a99;
+			background-image: url("./images/fb.svg");
+		}
+
+		&_vk {
+			background-color: #3d6898;
+			background-image: url(./images/vk.svg);
+		}
+
+		&_telegram {
+			background-color: #2ca5e0;
+			background-image: url(./images/telegram.svg);
+		}
+	}
+}
+
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-family: $font_content_2;
+    font-size: 16px;
+    line-height: 20px;
+
+	&__submit {
+		width: 100%;
+		margin-top: 20px;
+	}
+}
+
+
+.form__input_type {
+	&_name, &_email {
+		padding: 6px 12px 8px 12px;
+		height: 20px;
+		width: 314px;
+	} 
+
+	&_textarea {
+		resize: none;
+		height: 124px;
+		margin-top: 20px;
+		padding: 6px 12px 3px 12px;
+	}
+
+	&_file {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 34px;
+		margin-top: 20px;
+		& input {
+			display: none;
+		}
+
+	}
+	
+}
+
+
+@media screen and (max-width: 800px) {
+	.form__input_type {
+		&_name, &_email {
+			width: 100%;
+		} 
+
+		&_email , &_textarea, &_file{
+			margin-top: 16px;
+		}
+	}
+
+	.form__submit {
+		margin-top: 16px;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.footer {
+		padding: 52px 40px;
+	}
+	.contact__text {
+		margin-bottom: 20px;
+	}
+}
+
+
+@media screen and (max-width: 320px) {
+	.footer{
+		padding:52px 20px;
+	}
+
+}
