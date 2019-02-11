@@ -9,7 +9,7 @@ $font_title: 'Montserrat', sans-serif;
 $font_content_1: 'PT Mono', monospace;
 $font_content_2: 'PT Sans', sans-serif;
 
-$quantity_slides: (4);
+$quantity_slides: (4,4);
 
 @import "./styles/button.scss";
 @import "./styles/input.scss";
@@ -23,5 +23,6 @@ body {
 	 /*во время работы, flex использует ширину браузера, а элементы ширину viewport, 
 	 поэтому во время проверки адаптивной верстки путем изменения самого окна браузеру, 
 	 наблюдался баг, из-за лишних 17 пикселей полосы прокрутки*/
-	width: calc(100% + (100vw - 100%)); 
+	width: calc(100% + (100vw - 100%));
+	overflow-x: hidden;
 }
